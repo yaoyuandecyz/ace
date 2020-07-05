@@ -1,0 +1,28 @@
+<!--pages/yhq/yhq.wxml-->
+<!-- 物品详情 -->
+<view class="c">
+  <view class="m">
+    <swiper indicator-dots="true" autoplay="false" current="0" circular="false" duration="400" class="hd">
+      <block >
+        <swiper-item data-index="{{index}}" >
+          <image src="{{img2}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="tit">{{name}}</view>
+    <view class="des">{{des}}</view>
+    <view class="pp">
+      <view class="price">积分
+        <text>{{(prices)}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="sm">详情：
+    <text>{{des}}</text>
+  </view>
+
+
+<view class="tool">
+  <view class="tbtn add" bindtap="addCart" data-type="1">兑换入库</view>
+</view>
+</view>

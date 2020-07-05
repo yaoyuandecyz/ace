@@ -1,0 +1,170 @@
+/* pages/gonggao/gonggao.wxss */
+/* pages/rt3/rt3.wxss */
+.page{
+  padding: 20px
+}
+
+.text{
+  width: 100%;
+  margin-bottom: 40px;
+  font-size: 20px;
+  padding: 5px
+}
+
+.image{
+  width:31%;
+  height: 100px;
+  padding: 2px
+}
+
+.moment_img{
+  width: 98px;
+  height: 98px;
+}
+
+.image_content{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px
+}
+
+
+/*封面背景*/
+.backView{
+position:absolute;
+width:750rpx;
+herght:100rpx;
+background:rebeccapurple;
+}
+.blackImage{
+position:absolute;
+top:0px;
+bottom:0px;
+left:0px;
+width:100%;
+height:100$;
+z-indext:11;
+}
+/*头像*/
+.fu{
+   justify-content: center;
+    display:flex;
+flex-direction: row;
+flex:4;
+    border:1px solid green;
+    position:relative;
+    top:450rpx;
+width: 90%;
+ left: 35rpx;
+
+
+}
+.tou{
+border:1px solid red;
+}
+.na{
+border:1px solid red;
+}
+.heng{
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+flex:3;
+}
+.tou{
+  flex:1;
+}
+.na{
+  flex:2;
+}
+
+.touxiang{
+border:1px solid red;
+
+flex:3;
+
+}
+.anniu{
+border:1px solid red;
+
+flex:1;
+border-radius: 30rem;
+width: 3rem;
+height: 3rem;
+font-size:3rem;
+text-align: center;
+line-height: 3rem;
+
+}
+
+/*fabu8*/
+.dongtai{
+position:absolute;
+top:750rpx;
+left:15rpx;
+border:1px solid red;
+display: flex;
+flex-direction: column;
+width: 95%;
+}
+.view1{
+border:1px solid red;
+margin-top:15px;
+width:100%;
+
+}
+.dongtai1{
+  border:2px solid gold;
+  display: flex;
+  flex-direction: row;
+  width:100%;
+
+}
+
+.Dbu{
+   border:1px solid green;
+     display: flex;
+  flex-direction: row;
+    width:100%;
+    height:100%;
+}
+.TXpart{
+width:20%;
+}
+.Tu{
+   border:1px solid green;
+  width:80%;
+     display: flex;
+  flex-direction:column;
+  flex:3;
+}
+.pinglun{
+  flex:2;
+   display: flex;
+  flex-direction:column;
+  border:1px solid green;
+}
+.Dbu{
+  flex:1;
+}
+.tuPian{
+  border:1px solid green;
+  flex:1;
+  }
+.neirong{
+  border:1px solid green;
+  flex:1;
+  }
+.riqi{
+    border:1px solid green;
+    flex: 1;
+}
+.shanchu{
+    border:1px solid green;
+    flex: 1;
+}
+.Sdian{
+    border:1px solid green;
+    flex: 1;
+}

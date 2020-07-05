@@ -1,0 +1,73 @@
+<!--pages/shop/shop.wxml-->
+<scroll-view scroll-y="true" style="height=900rpx;">
+ <!-- 轮播 -->
+  <div>
+    <swiper indicator-dots="true" autoplay="false" current="0" circular="false" duration="400" class="hd">
+      <block wx:for="{{shangchengList}}" wx:key="*this">
+        <swiper-item data-index="{{index}}" catchtap="previewImg">
+          <view class="shangchengList{{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </div>
+
+<!-- 三个框印花优惠券积分 -->
+  <div class="tab">
+    <view class="other">
+      <view class="border_r">
+        <text class="title">我的印花</text>
+        <text class="info" data-yhshu="{{hnum}}">{{yhnum}}个</text>
+      </view>
+      <view class="border_r" bindtap="yhqnum">
+        <text class="title">我的优惠券</text>
+        <text class="info" data-yhqshu="{{yhqnum}}">{{yhqnum}}张</text>
+      </view>
+      <view class="border_r">
+        <text class="title">剩余积分</text>
+        <text class="info"  >{{num}}分</text>
+      </view>
+    </view>
+  </div>
+
+<!-- 悬赏印花 -->
+  <div>
+    <view>悬赏印花</view>
+    <view>
+      <view class="item">
+        <view class="img">
+          <image src="../images/hua.png" mode="aspectFit" />
+        </view>
+        <view class="con">
+          <view class="nm">{{name1}}</view>
+          <view class="des">{{des1}}</view>
+          <view class="sub">￥
+            <text>10.00</text>
+          </view>
+        </view>
+       <view class="duihuan buy" catchtap="_go">购买</view>
+      </view>
+    </view>
+  </div>
+
+  <!-- 优惠券兑换商城 -->
+  <div>
+    <view>优惠券兑换</view>
+
+    <view class="container-goods">
+      <view class="single-goods"  bindtap="goDetail"   wx:for="{{listyhq}}" wx:key="name" wx:for-item="p" data-pname="{{p.name}}" data-pdes="{{p.des}}" data-prices="{{p.price}}" data-img2="{{p.img}}">
+        <image class="avatar" src="{{p.img}}" mode="aspectFill" />
+        <text class="title">{{p.name}}</text>
+        <text class="title">{{p.des}}</text>
+        <view class="summary">
+          <text class="price">{{p.price}}积分</text>
+          <text class="sale">以兑换99张</text>
+        </view>
+      </view>
+    </view>
+
+
+  </div>
+
+<view class="dibu" >亲，没有更多了!</view>
+
+</scroll-view>

@@ -1,0 +1,64 @@
+<!--pages/gonggao/gonggao.wxml-->
+<!--pages/rt3/rt3.wxml-->
+<!--矩形3：公告信息界面-->
+
+
+<!--真实页面-->
+<view class = 'backView'>
+<image class = 'blackImage'src='/pages/images/add.png'></image>
+</view>
+<!--头像-->
+<view class="fu">
+
+<view class='touxiang'>
+<view class='heng'>
+<view class='tou'><open-data type = "userAvatarUrl" class="img"></open-data></view>
+<view class="na"><open-data type = "userNickName"lang = "zh_CN"></open-data></view>
+</view>
+<view class = "shuoshuo"><text>这个人很懒，什么也没有留下</text></view>
+</view>
+
+<!--按钮-->
+<!--<view class = 'anniu' formType="button"  bindtap='search'>+
+</view>
+-->
+<view class = 'anniu' > <navigator url="/pages/dongtaifabu/dongtaifabu" hover-class="navigator-hover">+</navigator>
+</view>
+</view>
+
+<!--动态-->
+
+<view class='dongtai'>
+
+<view class='view1'>
+
+<view class="dongtai1">
+<view class="TXpart"> 头像</view>
+<view class="Tu">
+
+<view class="pinglun">
+<view class="tuPian">文字</view>
+<view class="neirong">图</view>
+</view>
+
+<view class="Dbu">
+<view class="riqi">日期</view>
+<view class="shanchu">点赞</view>
+<view class="Sdian">评论</view>
+</view>
+</view>
+</view>
+
+</view>
+
+
+<view class='view1'><view class="view2">22</view></view>
+<view class='view1'><view class="view2">22</view></view>
+<view class='view1'> <view class="view2">22</view></view>
+<view class='view1'><view class="view2">22</view></view>
+
+</view>
+
+
+
+

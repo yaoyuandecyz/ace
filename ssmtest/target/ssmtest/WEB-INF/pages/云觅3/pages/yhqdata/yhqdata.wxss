@@ -1,0 +1,90 @@
+/* pages/yhqdata/yhqdata.wxss */
+
+
+.c {
+  padding: 0 0 80px;
+}
+
+.hd {
+  height: 500rpx;
+  background-color: #f3f3f3;
+}
+
+.hd image {
+  width: 750rpx;
+  height: 500rpx;
+}
+
+.tit {
+  font-size: 17pt;
+  font-weight: bold;
+  padding: 20rpx 30rpx;
+  margin: 10rpx 0 0;
+  background-color: #fff;
+}
+
+.des {
+  font-size: 12pt;
+  line-height: 22px;
+  padding: 0 35rpx 20rpx;
+  color: #999;
+}
+
+.pp {
+  padding: 20rpx;
+  color: #ff6a00;
+  border-top: 1rpx solid #eee;
+  display: flex;
+}
+
+.price {
+  flex: 1;
+}
+
+.price text {
+  font-size: 23pt;
+  font-weight: bold;
+}
+
+.sm {
+  padding: 20px 35rpx 0;
+  font-size: 12pt;
+  line-height: 22px;
+}
+
+.sm text {
+  color: #999;
+}
+
+.tool {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 20rpx 0;
+  display: flex;
+  width: 750rpx;
+  border-top: 1rpx solid #ddd;
+  box-shadow: 0 -1px 5px 0 #eee;
+  background-color: #fff;
+}
+
+.tool .tbtn {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.tool .add {
+  background-color: #f0f0f0;
+  border: 1rpx solid #ddd;
+  flex: 1;
+  margin: 0 10rpx 0 20rpx;
+  position: relative;
+}
+
+/*.cart-num{position: absolute; left: 5px;top: -20px; width: 40px; height:40px; line-height: 40px; text-align: center; border: 2px solid #fff;border-radius: 50%; background-color: #f00;color: #fff; box-shadow: 0 0 5px 0 #ccc;}*/
+
+.cart-num {
+  color: #f00;
+}

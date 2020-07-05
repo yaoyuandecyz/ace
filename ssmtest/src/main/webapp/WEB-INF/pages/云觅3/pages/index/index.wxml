@@ -1,0 +1,127 @@
+<!--index.wxml-->
+<scroll-view class="shouy" scroll-y="true" style="height:1200rpx">
+  <view class="top">
+    <view class="dingwei">
+      <image src="/pages/images/坐标.png" class="dwt"></image>
+      <scroll-view class="dwwz" scroll-x="true">{{textData}}{{name}}</scroll-view>
+    </view>
+    <view class="sousuo">
+      <input class="searchtext" placeholder="请输入关键字" type="text" confirm-type="search"></input>
+      <text class="search">搜索</text>
+    </view>
+  </view>
+  <!-- 轮播动画 -->
+  <view class="lunbo">
+    <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000" vertical="{{false}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="{{item}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 广播中心 -->
+  <view class="gonggao">
+    <text class="biaoti">公告：</text>
+    <view class='f-font24 s-32 announcement-context'>
+      <view animation="{{animationData}}" class="f-font24 s-32 announcement-text f-text-left">{{announcementText}}</view>
+    </view>
+  </view>
+
+  <!-- 导航菜单 -->
+  <view class='icon'>
+    <navigator url="/pages/shiwu/shiwu" hover-class="none">
+      <image src='/pages/images/zhao.png' mode="aspectFit"></image>
+      <text>寻物</text>
+    </navigator>
+    <navigator url="/pages/shiwu/shiwu" hover-class="none">
+      <image src='/pages/images/jian.png' mode="aspectFit"></image>
+      <text>招领</text>
+    </navigator>
+    <navigator url="/pages/gonggao/gonggao" hover-class="none">
+      <image src='/pages/images/gonggao.png' mode="aspectFit"></image>
+      <text>公告</text>
+    </navigator>
+  </view>
+  <!-- 菜单栏分两个视图一行三个 -->
+  <view class='icon'>
+    <navigator url="/pages/youxi/youxi" hover-class="none">
+      <image src='/pages/images/youxi.png' mode="aspectFit"></image>
+      <text>游戏</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=2" hover-class="none">
+      <image src='/pages/images/gengd.png' mode="aspectFit"></image>
+      <text>更多</text>
+    </navigator>
+    <navigator url="/pages/order/index?type=2" hover-class="none">
+      <image src='/pages/images/audio.png' mode="aspectFit"></image>
+      <text>待定</text>
+    </navigator>
+  </view>
+
+  <!-- 悬赏榜 -->
+  <scroll-view scroll-y="true" class="xuanshangbang" style="height='400rpx'">
+    <view class="content">
+      <view class="content-top">
+        <text>悬赏榜</text>
+      </view>
+      <view class="scroll-list-after">
+        <!-- 左边文字 -->
+        <view class="find-hot-item" wx:for="{{recHotList}}" wx:key="{{index}}" wx:item="item">
+          <image class="find-hot-avatar" src="{{item.avatar}}" />
+          <view class="find-hot-info">
+            <text class="find-focus-nickname find-hot-nickname">{{item.nickname}}</text>
+
+            <view class="find-focus-introduce">{{item.time}}小时前</view>
+          </view>
+          <view class="find-hot-content {{!showIndex[index] ? 'text-overflow' : ''}}">
+            {{item.content}}
+          </view>
+          <view wx:if="{{!showIndex[index]}}" class="find-show-all" data-index="{{index}}" bindtap="toggleShow">展开全文</view>
+          <view wx:if="{{showIndex[index]}}" class="find-show-all" data-index="{{index}}" bindtap="toggleShow">收起全文</view>
+          <!-- 右边图片 -->
+          <image class="content-img" src="/pages/images/fenxiang.png"></image>
+        </view>
+     </view>
+        <view class="scroll-list-after">
+          <view class="content-title">
+            <text>本人于2020年1月10日在广东白云学院孔子广场遗失一只晨光新型巨能写黑笔</text>
+            <view class="from">
+              <p>姓名陈小小</p>
+            </view>
+          </view>
+          <image class="content-img" src="/pages/images/fenxiang.png"></image>
+        </view>
+      </view>
+  </scroll-view>
+
+
+  <scroll-view scroll-y="true" class="xuanshangbang" style="height='400rpx'">
+    <view class="content">
+      <view class="content-top">
+        <text>云觅公告</text>
+      </view>
+      <view class="scroll-list-after">
+        <view class="content-title">
+          <text>本人于2020年1月10日在广东白云学院孔子广场遗失一只晨光新型巨能写黑笔</text>
+          <view class="from">
+            <p>姓名陈小小</p>
+          </view>
+        </view>
+        <image class="content-img" src="/pages/images/fenxiang.png"></image>
+      </view>
+
+      <view class="scroll-list-after">
+        <view class="content-title">
+          <text>本人于2020年1月10日在广东白云学院孔子广场遗失一只晨光新型巨能写黑笔</text>
+          <view class="from">
+            <p>姓名陈小小</p>
+          </view>
+        </view>
+        <image class="content-img" src="/pages/images/fenxiang.png"></image>
+      </view>
+    </view>
+  </scroll-view>
+
+</scroll-view>

@@ -1,0 +1,91 @@
+/* pages/rt4/rt4.wxss */
+.lunbo{
+  width:100%;
+  border:1px solid red;
+}
+.lunbo image{
+  width:100%;
+}
+
+/*公告跑马灯*/
+
+.crd{
+display: flex;
+  flex-direction: row;
+border:1px solid red;
+
+}
+.crty{
+border:1px solid blue;
+
+
+}
+.announcement-context {
+    width: 580rpx;
+    /* 偏移出文本框的内容隐藏掉 */
+    overflow: hidden;
+}
+.announcement-text {
+    width: 570rpx;
+    /* 文字内容只做一行显示 */
+    white-space: nowrap;
+}
+.info_box_happy{
+    font-size: 12px;
+    color: #333;
+    white-space : nowrap;
+    padding: 10rpx 3rpx;
+    background: #fff;
+    border-bottom: 2rpx #f5f5f5 solid;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.info_box_happy_txt{
+    color: red;
+    width: 100%;
+    position: relative;
+}
+
+/*官方小游戏*/
+.GFgame{
+  border:1px solid red;
+      display:flex;
+flex-direction: column;
+height:1200rpx;
+justify-content:space-around;
+position:relative;
+left:15rpx;
+top:20rpx;
+width:95%;
+}
+.word1{
+  border:1px solid red;
+  flex:1;
+ margin-top:15rpx;
+ display:flex;
+ flex-direction: column;
+ flex:5;
+}
+.YXtitle{
+ border:1px solid red;
+ flex:1;
+}
+.neirong{
+ border:1px solid red;
+ flex:3;
+  display:flex;
+ flex-direction: row;
+}
+
+
+.tu{
+ border:1px solid red;
+ flex:1;
+}
+.qita{
+ border:1px solid red;
+ flex:2;
+  display:flex;
+ flex-direction: column;
+}

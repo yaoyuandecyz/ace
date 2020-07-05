@@ -1,0 +1,59 @@
+<!--pages/fabu/fabu.wxml-->
+<div class="heizi">
+<div class="diyilie">
+  <view class="wupim">物品名称:</view>
+  <input class="wupimshu"  placeholder="请输入物品名称"></input>
+  <view>
+    <view class="diviline"></view>
+  </view>
+</div>
+
+<div class="diyilie">
+  <view class="xingm">姓名：</view>
+  <input class="xingmshu"  placeholder="请输入姓名"></input>
+  <view>
+    <view class="diviline"></view>
+  </view>
+</div>
+
+<div class="diyilie">
+  <view class="lianxif">联系方式：</view>
+  <input class="lianxifshu"  placeholder="请输入联系方式"></input>
+  <view>
+    <view class="diviline"></view>
+  </view>
+</div>
+</div>
+
+<div class="section">
+  <view class="leixing">类型:</view>
+  <picker  class="leixingp" value="{{leixing}}" bindchange="bindPickerChange" range="{{array}}">
+    <view class="picker">
+      当前选择：{{array[leixing]}}
+    </view>
+  </picker>
+</div>
+
+<div class="section">
+  <view class="shijian">日期:</view>
+  <picker class="riqip" mode="date" value="{{date}}" start="2019-12-01" end="2030-12-01" bindchange="bindDateChange">
+    <view class="picker">
+       请选择：{{date}}
+    </view>
+  </picker>
+</div>
+
+<div>概述</div>
+<textarea placeholder="请输入" maxlength="120"  adjust-position="true"></textarea>
+
+<div>
+<view class="jianjiao">提交类型</view>
+ <picker  class="jiaoj" value="{{jianjiaoshuz}}" bindchange="bindPickerChange2" range="{{jianjiaoshuzarray}}">
+    <view class="picker">
+      当前选择：{{jianjiaoshuzarray[jianjiaoshuz]}}
+    </view>
+  </picker>
+</div>
+
+<button size="mini" type="primary">提交</button>
+<button size="mini" type="primary">海报生成</button>

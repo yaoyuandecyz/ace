@@ -1,0 +1,43 @@
+<!--pages/youxi/youxi.wxml-->
+<!--pages/rt4/rt4.wxml-->
+
+<view >
+    <!--轮播图-->
+<swiper class='lunbo' indicator-dots='true' autoplay='true' interval='4000'>
+       <swiper-item> <image src='/pages/images/add.png'></image> </swiper-item>
+       <swiper-item> <image src='/pages/images/add.png'></image></swiper-item>
+       <swiper-item> <image src='/pages/images/add.png'></image> </swiper-item>
+      </swiper>
+   
+</view>
+
+<!-- 公告跑马灯 -->
+<view class='crd'>
+            <view class='crty f-pl25 f-font24 f-pr25'>公告</view>
+            <view class='crty f-pl25 f-font24 f-pr25'>喇叭</view>
+            <view class='f-font24 s-32 announcement-context'>
+                <view animation="{{animationData}}" class="f-font24 s-32 announcement-text f-text-left">{{announcementText}}</view>
+            </view>
+</view>
+
+<view class="GFgame">
+
+<view class="word1">
+<view class="YXtitle">游戏标题</view>
+<view class="neirong">
+<view class="tu">图</view>
+<view class="qita">
+<view class="xushu">叙述</view>
+<view class="CJtime">参加的时间</view>
+<view class="Didian">地点</view>
+<view class="CJnums">参加人数</view>
+</view>
+</view>
+
+</view>
+<view class="word1">游戏1</view>
+<view class="word1">游戏1</view>
+<view class="word1">游戏1</view>
+
+
+</view>

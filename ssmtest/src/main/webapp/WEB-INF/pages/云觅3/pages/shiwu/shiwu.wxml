@@ -1,0 +1,81 @@
+<!--pages/rt1/rt1.wxml-->
+<!--矩形1：失物招领页面-->
+<!-- 导航条 -->
+<view class="nav">
+  <view bindtap="navSwitch" data-index="0" class="{{navState==0 ? 'nav-switch-style':''}}">失物公告</view>
+  <view bindtap="navSwitch" data-index="1" class="{{navState==1 ? 'nav-switch-style':''}}">拾物公告</view>
+  <!--  <view bindtap="navSwitch" data-index="2" class="{{navState==2 ? 'nav-switch-style':''}}">页面三</view>-->
+</view>
+
+<!--公告跑马灯-->
+
+<!-- 公告跑马灯 -->
+<view class='crd'>
+  <view class='crty f-pl25 f-font24 f-pr25'>公告</view>
+  <view class='crty f-pl25 f-font24 f-pr25'>喇叭</view>
+  <view class='f-font24 s-32 announcement-context'>
+    <view animation="{{animationData}}" class="f-font24 s-32 announcement-text f-text-left">{{announcementText}}</view>
+  </view>
+</view>
+
+
+
+
+
+
+<!-- 不可滑动页 -->
+
+<scroll-view>
+  <view wx:if="{{navState==0}}" class="style-default">
+    <view class="shiwu">
+      <view class="tu">图</view>
+      <view class="qita">
+
+        <view class="da">
+          <view class="biaoqian">
+            <view class="name">名称</view>
+            <view class="didian">地点</view>
+            <view class="shijian">时间</view>
+          </view>
+          <view class="neirong">内容</view>
+        </view>
+
+        <view class="xiao">
+          <view class="chatme">联系我</view>
+          <view class="leixing">类型</view>
+        </view>
+
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class="content" wx:for="{{listwu}}" wx:key="{{index}}" wx:for-item="w">
+    <view class="zuobu">
+      <image class="content-img " src="/pages/images/fenxiang.png "></image>
+    </view>
+    <view class="youbu">
+      <view class="userinfo">
+        <image class="touxiang " src="/pages/images/fenxiang.png "></image>
+        <view class="mingzi">
+          <text class="find-focus-nickname find-hot-nickname ">{{w.name}}</text>
+          <view class="find-focus-introduce ">{{item.time}}小时前</view>
+        </view>
+      </view>
+      <view class="find-hot-content {{isF?'hide':''}} ">
+        {{w.summary}}
+        <text style="float:" bindtap='aa'>{{idF?'展开':'收起'}}</text>
+      </view>
+
+      <view class="xiao">
+        <view class="chatme">联系我</view>
+        <view class="leixing">类型</view>
+      </view>
+
+    </view>
+
+
+  </view>
+
+</scroll-view>

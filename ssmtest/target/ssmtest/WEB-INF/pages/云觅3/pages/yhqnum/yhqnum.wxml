@@ -1,0 +1,30 @@
+<!--pages/yhqnum/yhqnum.wxml-->
+
+<view>
+  <view class="tab">
+    <view class="{{tab==0?'tab-on':'tab-out'}}" data-index="0" catchtap="changeTab">优惠券</view>
+    <view class="{{tab==1?'tab-on':'tab-out'}}" data-index="1" catchtap="changeTab">过期优惠券</view>
+  </view>
+
+  <div class="coupon" wx:for="{{plist}}" wx:key="name" wx:for-item="p" >
+    <div class="cone" >
+      <div class="d2">商品券</div>
+      <div class="d1">
+        <div class="zuobu">
+          <span class="jiaqian">{{p.money}}</span>
+          <span class="danwei">元</span>
+        </div>
+        <div class="youbu">
+          <p class="xianzhi1">{{p.name}}</p>
+          <p class="xianzhi2">{{p.des}}</p>
+        </div>
+      </div>
+      <div class="d3">
+        <p class="dianm">【白云一号店】{{p.validtime}} <text>现有：{{p.num}}</text></p>
+        <view class="anniu" bindtap="shiyong">立即使用</view>
+      </div>
+    </div>
+
+  </div>
+
+</view>

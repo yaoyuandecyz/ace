@@ -1,0 +1,188 @@
+/* pages/yhqnum/yhqnum.wxss */
+
+.tab {
+  width: 720rpx;
+  position: fixed;
+  z-index: 100;
+  left: 14rpx;
+  top: 10rpx;
+  border: 1px solid #576b95;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  display: flex;
+  font-size: 13pt;
+}
+
+.tab-layer {
+  width: 750rpx;
+  height: 50px;
+  background: #fff;
+  opacity: 0.9;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 99;
+  border-bottom: 1rpx solid #dedede;
+}
+
+.tab .tab-on {
+  background-color: #576b95;
+  text-align: center;
+  color: #fff;
+  flex: 1;
+}
+
+.tab .tab-out {
+  text-align: center;
+  flex: 1;
+}
+
+/* 优惠券 */
+
+/* 灰色背景框   相对定位，弹性盒子 宽度100% 过渡4秒 允许内部并排盒子 堆叠为12可以不用*/
+
+.coupon {
+  position: relative;
+  top: 120rpx;
+  display: flex;
+  width: 100%;
+  /* 过渡效果 */
+  transition: all 400ms ease;
+  /* 并排放置两个带边框的框 */
+  box-sizing: border-box;
+  background: #f8f8f8;
+  z-index: 12;
+}
+
+.cone {
+  width: 100%;
+}
+
+.d1 {
+  margin: 10rpx 20rpx 0rpx 10rpx;
+  padding: 30rpx 0;
+  display: flex;
+  background: linear-gradient(to top, #ffc875, #fabb5c);
+  border-radius: 20rpx;
+}
+
+.zuobu {
+  width: 230rpx;
+  /* 中间的虚线 */
+  border-right: 1rpx dashed #fff;
+  color: #fff;
+  text-align: center;
+  line-height: 90rpx;
+}
+
+/* 左边距使40 */
+
+.youbu {
+  padding: 0 0 0 40rpx;
+  /* display: block; */
+}
+
+.jiaqian {
+  display: inline-block;
+  font-size: 90rpx;
+  /* 加粗 */
+  font-weight: bold;
+  margin-right: 10rpx;
+}
+
+.danwei {
+  font-size: 36rpx;
+}
+
+/* 右边第一个p */
+
+.xianzhi1 {
+  display: block;
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 45rpx;
+  margin-bottom: 20rpx;
+}
+
+.xianzhi2 {
+  color: #fff;
+  font-size: 26rpx;
+  line-height: 45rpx;
+  margin-bottom: 20rpx;
+}
+
+/* 右上角的标签 */
+
+.d2 {
+  font-size: 24rpx;
+  padding: 0 15rpx;
+  line-height: 40rpx;
+  color: #ffac30;
+  /* 渐变色 */
+  background: linear-gradient(to top, #fffdfd, #fff);
+  right: 15rpx;
+  position: absolute;
+  margin-top: 20rpx;
+  /* 添加阴影 */
+  box-shadow: 5px 2px 8px #ffac30;
+}
+
+.d2::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border-top: 20rpx solid #fffdfd;
+  border-left: 15rpx solid transparent;
+  border-bottom: 20rpx solid #fffdfd;
+  border-left: 15rpx solid transparent;
+}
+
+.d3 {
+  background: #fff;
+  padding: 0 50rpx;
+  margin-left: 10rpx;
+  width: 80%;
+}
+
+.anniu {
+  float: right;
+  width: 100rpx;
+  color: #55c47d;
+  border: 1rpx solid #55c47d;
+  line-height: 36rpx;
+  border-radius: 18rpx;
+  padding: 0 20rpx;
+  font-size: 20rpx;
+  margin: 5rpx 50rpx 0rpx 0rpx ;
+ 
+}
+
+.dianm {
+  color: #999;
+  font-size: 20rpx;
+  line-height: 60rpx;
+  
+}
+
+.d3::before, .d3::after {
+  /* // 这里及以下是圆弧展示 */
+  content: "";
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 100%;
+  background: #fffdfd;
+}
+
+.d3::before {
+  left: 10rpx;
+  margin-top: -30rpx;
+}
+
+.d3::after {
+  right: 10rpx;
+  margin-top: -30rpx;
+}
